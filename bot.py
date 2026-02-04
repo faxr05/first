@@ -116,9 +116,9 @@ class BotStates(StatesGroup):
 TEXTS = {
     'uz': {
         'welcome': '👋 Assalomu alaykum!\n\n📊 Taqdimot va 📝 Referat/Mustaqil ish tayyorlash botiga xush kelibsiz!\n\n💎 Kunlik limit: {remaining}/{total}\n\nTilni tanlang:',
-        'subscription_required': '📢 Botdan foydalanish uchun kanalga obuna bo\'ling:\n\n{channel}\n\n✅ Obuna bo\'lgach "Tasdiqlash" tugmasini bosing',
+        'subscription_required': '📢 Botdan foydalanish uchun kanalga obuna bo\'ling:\n\n⛔️{channel}⛔️\n\n✅ Obuna bo\'lgach "Tasdiqlash" tugmasini bosing',
         'check_btn': '✅ Obuna tekshirish',
-        'not_subscribed': '❌ Siz hali obuna bo\'lmadingiz!\n\nIltimos, avval kanalga obuna bo\'ling: {channel}',
+        'not_subscribed': '❌ Siz hali obuna bo\'lmadingiz!\n\nIltimos, avval kanalga obuna bo\'ling: ⛔️{channel}⛔️',
         'select_type': '📑 Qaysi turdagi hujjat kerak?\n\n💎 Bugungi limit: {remaining}/{total}',
         'presentation': '📊 Taqdimot (PPTX)',
         'report': '📝 Referat',
@@ -138,9 +138,9 @@ TEXTS = {
     },
     'ru': {
         'welcome': '👋 Здравствуйте!\n\n📊 Бот для создания презентаций и 📝 рефератов!\n\n💎 Лимит: {remaining}/{total}\n\nВыберите язык:',
-        'subscription_required': '📢 Подпишитесь на канал:\n\n{channel}\n\n✅ Нажмите "Проверить"',
+        'subscription_required': '📢 Подпишитесь на канал:\n\n⛔️{channel}⛔️\n\n✅ Нажмите "Проверить"',
         'check_btn': '✅ Проверить',
-        'not_subscribed': '❌ Вы не подписались!\n\nПодпишитесь: {channel}',
+        'not_subscribed': '❌ Вы не подписались!\n\nПодпишитесь: ⛔️{channel}⛔️',
         'select_type': '📑 Тип документа?\n\n💎 Лимит: {remaining}/{total}',
         'presentation': '📊 Презентация',
         'report': '📝 Реферат',
@@ -160,9 +160,9 @@ TEXTS = {
     },
     'en': {
         'welcome': '👋 Hello!\n\n📊 Presentation & Report Bot!\n\n💎 Limit: {remaining}/{total}\n\nSelect language:',
-        'subscription_required': '📢 Subscribe:\n\n{channel}\n\n✅ Click "Check"',
+        'subscription_required': '📢 Subscribe:\n\n⛔️{channel}⛔️\n\n✅ Click "Check"',
         'check_btn': '✅ Check',
-        'not_subscribed': '❌ Not subscribed!\n\nSubscribe: {channel}',
+        'not_subscribed': '❌ Not subscribed!\n\nSubscribe: ⛔️{channel}⛔️',
         'select_type': '📑 Document type?\n\n💎 Limit: {remaining}/{total}',
         'presentation': '📊 Presentation',
         'report': '📝 Report',
