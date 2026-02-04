@@ -124,8 +124,8 @@ TEXTS = {
         'report': '📝 Referat',
         'coursework': '📚 Mustaqil ish',
         'enter_topic': '✍️ Mavzuni kiriting:',
-        'enter_pages': '📄 Nechta sahifa kerak? (3-50 oralig\'ida)',
-        'invalid_pages': '❌ Noto\'g\'ri son! 3 dan 50 gacha son kiriting.',
+        'enter_pages': '📄 Nechta sahifa kerak? (5-20 oralig\'ida)',
+        'invalid_pages': '❌ Noto\'g\'ri son! 5 dan 20 gacha son kiriting.',
         'select_design': '🎨 Dizayn shablonini tanlang:',
         'confirm_data': '📋 <b>Kiritilgan ma\'lumotlar:</b>\n\n🎯 Tur: {doc_type}\n📖 Mavzu: {topic}\n📄 Sahifalar: {pages}\n{design}\n✅ Davom etamizmi?',
         'confirm_yes': '✅ Ha, davom etish',
@@ -146,8 +146,8 @@ TEXTS = {
         'report': '📝 Реферат',
         'coursework': '📚 Курсовая',
         'enter_topic': '✍️ Введите тему:',
-        'enter_pages': '📄 Страниц? (3-50)',
-        'invalid_pages': '❌ Неверно! 3-50.',
+        'enter_pages': '📄 Страниц? (5-20)',
+        'invalid_pages': '❌ Неверно! 5-20.',
         'select_design': '🎨 Дизайн:',
         'confirm_data': '📋 <b>Данные:</b>\n\n🎯 Тип: {doc_type}\n📖 Тема: {topic}\n📄 Страниц: {pages}\n{design}\n✅ Продолжить?',
         'confirm_yes': '✅ Да',
@@ -168,8 +168,8 @@ TEXTS = {
         'report': '📝 Report',
         'coursework': '📚 Coursework',
         'enter_topic': '✍️ Topic:',
-        'enter_pages': '📄 Pages? (3-50)',
-        'invalid_pages': '❌ Invalid! 3-50.',
+        'enter_pages': '📄 Pages? (5-20)',
+        'invalid_pages': '❌ Invalid! 5-20.',
         'select_design': '🎨 Design:',
         'confirm_data': '📋 <b>Data:</b>\n\n🎯 Type: {doc_type}\n📖 Topic: {topic}\n📄 Pages: {pages}\n{design}\n✅ Continue?',
         'confirm_yes': '✅ Yes',
@@ -209,11 +209,11 @@ async def generate_content_with_gemini(topic: str, pages: int, doc_type: str, la
         prompt = f"""Create presentation in {lang_full} about "{topic}". Generate EXACTLY {pages} slides.
 Return ONLY valid JSON:
 {{"title": "Main title", "slides": [{{"title": "Slide 1", "content": ["Point 1", "Point 2", "Point 3"]}}]}}
-Requirements: Each slide 3-5 points, {lang_full} language, ONLY JSON"""
+Requirements: Each slide 5-7 points, {lang_full} language, ONLY JSON"""
     else:
         prompt = f"""Create {'report' if doc_type == 'report' else 'coursework'} in {lang_full} about "{topic}". For {pages} pages.
 Return ONLY valid JSON:
-{{"title": "Title", "introduction": "Intro (2-3 paragraphs)", "sections": [{{"title": "Section 1", "content": "Content (3-4 paragraphs)"}}], "conclusion": "Conclusion (2-3 paragraphs)"}}
+{{"title": "Title", "introduction": "Intro (4-5 paragraphs)", "sections": [{{"title": "Section 1", "content": "Content (4-5 paragraphs)"}}], "conclusion": "Conclusion (2-3 paragraphs)"}}
 Requirements: Enough sections for {pages} pages, {lang_full}, ONLY JSON"""
 
     try:
@@ -400,7 +400,7 @@ async def enter_pages(message: types.Message, state: FSMContext):
     
     try:
         pages = int(message.text)
-        if pages < 3 or pages > 50:
+        if pages < 5 or pages > 20:
             await message.answer(get_text(lang, 'invalid_pages'))
             return
         
