@@ -412,7 +412,7 @@ async def enter_pages(message: types.Message, state: FSMContext):
             keyboard_buttons = []
             
             for design_id, design_info in DESIGNS.items():
-                designs_text += f"{design_id}. {design_info['name']}\n"
+                #designs_text += f"{design_id}. {design_info['name']}\n"
                 keyboard_buttons.append([InlineKeyboardButton(text=f"{design_id}. {design_info['name']}", callback_data=f"design_{design_id}")])
             
             keyboard = InlineKeyboardMarkup(inline_keyboard=keyboard_buttons)
