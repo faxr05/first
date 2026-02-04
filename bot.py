@@ -183,11 +183,11 @@ TEXTS = {
 }
 
 DESIGNS = {
-    '1': {'name': 'Klassik Ko\'k', 'bg': (31, 78, 121), 'title': (255, 255, 255), 'text': (0, 0, 0)},
-    '2': {'name': 'Professional', 'bg': (68, 114, 196), 'title': (255, 255, 255), 'text': (0, 0, 0)},
-    '3': {'name': 'Zamonaviy', 'bg': (91, 155, 213), 'title': (255, 255, 255), 'text': (0, 0, 0)},
-    '4': {'name': 'Qizil', 'bg': (192, 0, 0), 'title': (255, 255, 255), 'text': (0, 0, 0)},
-    '5': {'name': 'Yashil', 'bg': (0, 176, 80), 'title': (255, 255, 255), 'text': (0, 0, 0)}
+    '1': {'name': 'Klassik Ko\'k', 'bg': (31, 78, 121), 'title': (31, 78, 121), 'text': (0, 0, 0)},
+    '2': {'name': 'Professional', 'bg': (68, 114, 196), 'title': (68, 114, 196), 'text': (0, 0, 0)},
+    '3': {'name': 'Zamonaviy', 'bg': (91, 155, 213), 'title': (91, 155, 213), 'text': (0, 0, 0)},
+    '4': {'name': 'Qizil', 'bg': (192, 0, 0), 'title': (192, 0, 0), 'text': (0, 0, 0)},
+    '5': {'name': 'Yashil', 'bg': (0, 176, 80), 'title': (0, 176, 80), 'text': (0, 0, 0)}
 }
 
 # ============ FUNKSIYALAR ============
